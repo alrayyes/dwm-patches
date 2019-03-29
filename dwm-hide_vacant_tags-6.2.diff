@@ -1,7 +1,7 @@
 From 6c859f68483e90e50c2bbd5dd196764d4dbd3551 Mon Sep 17 00:00:00 2001
 From: Ryan Kes <alrayyes@gmail.com>
 Date: Thu, 28 Mar 2019 14:23:35 +0100
-Subject: [PATCH] hide_vacant_tags patch
+Subject: [PATCH] hide_vacant_tags-6.2 patch
 
 ---
  dwm.c | 18 ++++++++++--------
