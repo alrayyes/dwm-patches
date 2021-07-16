@@ -39,7 +39,7 @@ index 4465af1..bcf5cb1 100644
  			arg.ui = 1 << i;
  		} else if (ev->x < x + blw)
  			click = ClkLtSymbol;
--		else if (ev->x > selmon->ww - TEXTW(stext))
+-		else if (ev->x > selmon->ww - (int)TEXTW(stext))
 -			click = ClkStatusText;
  		else
 -			click = ClkWinTitle;
@@ -50,7 +50,7 @@ index 4465af1..bcf5cb1 100644
 @@ -729,15 +727,8 @@ drawbar(Monitor *m)
  	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
  
- 	if ((w = m->ww - sw - x) > bh) {
+ 	if ((w = m->ww - tw - x) > bh) {
 -		if (m->sel) {
 -			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
 -			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
